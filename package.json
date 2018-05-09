@@ -1,6 +1,6 @@
 {
   "name": "lambda-multipart-promise",
-  "version": "0.0.5-alpha.1",
+  "version": "0.0.5",
   "description": "A small promise wrapper for lambda-multipart",
   "main": "multipart.js",
   "scripts": {
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/therebelrobot/lambda-multipart-promise/issues"
   },
-  "homepage": "https://github.com/therebelrobot/lambda-multipart-promise#readme"
+  "homepage": "https://github.com/therebelrobot/lambda-multipart-promise#readme",
+  "dependencies": {
+    "busboy": "^0.2.14",
+    "raw-body": "^2.3.3",
+    "yerror": "^2.1.0"
+  }
 }
