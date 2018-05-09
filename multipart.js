@@ -2,10 +2,10 @@ var Multipart = require('lambda-multipart');
 
 module.exports = (event) => new Promise((resolve, reject) => {
   const results = { fields: {}, fieldsList: [], files: [] };
-  var parser = new Multipart(event);
+  const parser = new Multipart(event);
 
   parser.on('field',function(key, value){
-    results.field[key] = value;
+    results.fields[key] = value;
     results.fieldsList.push({ key, value });
   });
 
