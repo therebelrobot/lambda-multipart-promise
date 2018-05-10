@@ -2,10 +2,11 @@
 const Busboy = require('busboy');
 const YError = require('yerror');
 const getRawBody = require('raw-body');
+const noop = () => null;
 
 module.exports = (content, headers, opts) => new Promise((resolve, reject) => {
   let log = () => null;
-  if (opts.verbose) { log = console.log };
+  if (opts.verbose) { log = console.log; } else { log = noop; }
   headers['content-type'] = headers['Content-Type'];
   log('Initializing Parse', content, headers);
   const filePromises = [];

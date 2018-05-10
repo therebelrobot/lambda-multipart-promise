@@ -1,6 +1,6 @@
 {
   "name": "lambda-multipart-promise",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A small promise wrapper for lambda-multipart",
   "main": "multipart.js",
   "scripts": {
