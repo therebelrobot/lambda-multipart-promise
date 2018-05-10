@@ -23,6 +23,7 @@ module.exports = (content, headers, opts) => new Promise((resolve, reject) => {
       filename,
       encoding,
       mimetype,
+      stream: file,
     };
     filePromises.push(
       getRawBody(file).then(rawFile => (data[name].content = rawFile))
