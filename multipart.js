@@ -2,9 +2,9 @@
 const Busboy = require('busboy');
 const YError = require('yerror');
 const getRawBody = require('raw-body');
-let log = () => null;
 
 module.exports = (content, headers, opts) => new Promise((resolve, reject) => {
+  let log = () => null;
   if (opts.verbose) { log = console.log };
   headers['content-type'] = headers['Content-Type'];
   log('Initializing Parse', content, headers);
