@@ -7,7 +7,7 @@ const noop = () => null;
 module.exports = (content, headers, opts) => new Promise((resolve, reject) => {
   let log = () => null;
   if (opts.verbose) { log = console.log; } else { log = noop; }
-  headers['content-type'] = headers['Content-Type'];
+  if (!headers['content-type'] && !!headers['Content-Type']) { headers['content-type'] = headers['Content-Type']; }
   log('Initializing Parse', content, headers);
   const filePromises = [];
   const data = {};
